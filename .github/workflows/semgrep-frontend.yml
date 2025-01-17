@@ -1,4 +1,4 @@
-name: App - Semgrep
+name: Frontend - Semgrep
 on:
   workflow_dispatch: {}
   pull_request: {}
@@ -25,4 +25,4 @@ jobs:
     if: (github.actor != 'dependabot[bot]')
     steps:
       - uses: actions/checkout@v4
-      - run: SEMGREP_REPO_DISPLAY_NAME=Abalone-Core/frontend semgrep ci --subdir packages/FrontendService/
+      - run: SEMGREP_REPO_DISPLAY_NAME=Abalone-Core/frontend semgrep ci --subdir src/FrontendService/
